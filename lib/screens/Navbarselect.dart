@@ -38,7 +38,7 @@ class _NavBarSelectState extends State<NavBarSelect> {
 
             ),
             BottomNavigationBarItem(
-              icon: Icon(EvaIcons.search),
+              icon: Icon(EvaIcons.compassOutline),
               title: Text('.'),
 
             ),

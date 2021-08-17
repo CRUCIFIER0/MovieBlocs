@@ -29,7 +29,7 @@ class MovieCard extends StatelessWidget {
                           );
       },
       child: Container(
-        margin: EdgeInsets.only(left: 20, right: 20),
+        margin: EdgeInsets.only(left: 24, right: 24),
         padding: EdgeInsets.only(top: 10,left:10,right: 10,bottom: 10),
         decoration: BoxDecoration(
             borderRadius: BorderRadius.all(Radius.circular(20.0)),
