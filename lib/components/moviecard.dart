@@ -1,3 +1,4 @@
+import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:yellowclassapp/models/movie.dart';
@@ -16,17 +17,7 @@ class MovieCard extends StatelessWidget {
     double randomNumber = random.nextDouble() + 7+random.nextDouble() +random.nextDouble();
     return InkWell(
       onTap: (){
-        Navigator.push(
-                            context, MaterialPageRoute(
-                              builder: (context)=>AddMovieList(
-                                isEditing: true,
-                                name: movie!.name,
-                                director: movie!.director,
-                                img64: movie!.cover,
-                                ogName: movie!.name,
-                              )
-                            )
-                          );
+
       },
       child: Container(
         margin: EdgeInsets.only(left: 24, right: 24),
@@ -50,9 +41,42 @@ class MovieCard extends StatelessWidget {
                 children: [
                   Text(movie!.name.toString(), softWrap: true,overflow: TextOverflow.clip, maxLines: 2,style: GoogleFonts.spaceGrotesk(textStyle: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.w800))),
                   SizedBox(height: 10),
-                  Text("⭐   "+randomNumber.toStringAsFixed(2) ,style: TextStyle(color: Colors.yellow, fontWeight: FontWeight.w800)),
+                  Row(
+                    children: [
+                      Text("⭐   "+randomNumber.toStringAsFixed(2) ,style: TextStyle(color: Colors.yellow, fontWeight: FontWeight.w800)),
+                      SizedBox(width: 40,),
+                      Container(
+                        width: 70,
+                        height: 20,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.all(Radius.circular(15.0)),
+                          color:Colors.yellow
+                        ),
+                        child: Center(child: Text("IMDB "+randomNumber.toStringAsFixed(1) , style: TextStyle(color: Colors.black, fontWeight: FontWeight.w800))),
+                      ),
+                    ],
+                  ),
                   SizedBox(height: 10),
                   Text(movie!.director.toString(),style: GoogleFonts.spaceGrotesk(textStyle: TextStyle(color: Colors.grey, fontSize: 14, fontWeight: FontWeight.w200))),
+                  Align(
+                    alignment: Alignment.bottomRight,
+                    child: Row(children: [
+                      Spacer(),
+                      IconButton(icon: Icon(EvaIcons.editOutline,color: Colors.grey,size:21), onPressed: (){Navigator.push(
+                          context, MaterialPageRoute(
+                          builder: (context)=>AddMovieList(
+                            isEditing: true,
+                            name: movie!.name,
+                            director: movie!.director,
+                            img64: movie!.cover,
+                            ogName: movie!.name,
+                          )
+                      )
+                      );}),
+                      IconButton(icon: Icon(EvaIcons.trash2Outline,color: Colors.grey,size: 18,), onPressed: (){MovieProvider.instance.deleteMovie(movie!);}),
+
+                    ],),
+                  )
                 ],
               ),
             )

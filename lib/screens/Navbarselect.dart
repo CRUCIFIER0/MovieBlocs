@@ -2,6 +2,7 @@ import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/material.dart';
 import 'package:yellowclassapp/screens/extrascreens/MainPage.dart';
+import 'package:yellowclassapp/screens/extrascreens/Profile.dart';
 import 'package:yellowclassapp/screens/homescreen/home.dart';
 
 class NavBarSelect extends StatefulWidget {
@@ -18,7 +19,7 @@ class _NavBarSelectState extends State<NavBarSelect> {
       MainPage(),
       HomeScreen(),
       //Covidhelp(),
-      //Profile(userDetails: widget.userDetails)
+      Profile()
     ];
     return Scaffold(
       body: pages[_c],

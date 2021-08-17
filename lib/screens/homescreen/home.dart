@@ -26,7 +26,8 @@ class _HomeScreenState extends State<HomeScreen> {
       value: MovieProvider.instance.moviesStream,
       initialData: [],
       child: Scaffold(
-        backgroundColor: Color.fromRGBO(28, 27, 37, 1),
+        resizeToAvoidBottomInset : false,
+          backgroundColor: Color.fromRGBO(28, 27, 37, 1),
         // appBar: AppBar(
         //   title: Text('Movies List'),
         //   actions: [
@@ -93,8 +94,8 @@ class _HomeScreenState extends State<HomeScreen> {
             Row(
               children: [
                 SizedBox(width: 25,),
-                Text("Your ", style: GoogleFonts.workSans(textStyle: TextStyle(color: Colors.white, fontSize: 26, fontWeight: FontWeight.w600)),),
-                Text("Movies", style: GoogleFonts.workSans(textStyle: TextStyle(color: Colors.white, fontSize: 22, fontWeight: FontWeight.w400)),),
+                Text("Your ", style: GoogleFonts.catamaran(textStyle: TextStyle(color: Colors.white, fontSize: 26, fontWeight: FontWeight.w800)),),
+                Text("movies", style: GoogleFonts.catamaran(textStyle: TextStyle(color: Colors.white, fontSize: 26, fontWeight: FontWeight.w400)),),
               ],
             ),
             SizedBox(height: 20),

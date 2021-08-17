@@ -43,7 +43,8 @@ ThemeData lightTheme() {
     ),
     inputDecorationTheme: InputDecorationTheme(  
       hintStyle: TextStyle(  
-        fontSize: 14,
+        fontSize: 16,
+        color: Colors.grey
       )
     ),
     elevatedButtonTheme: ElevatedButtonThemeData(  
