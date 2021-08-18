@@ -1,4 +1,4 @@
-# Movie Blocs - (A Yellow Assignment)
+# Movie Blocs - (A Yellow Class Assignment)
 
 
 ![alt text](https://raw.githubusercontent.com/CRUCIFIER0/MovieBlocs/master/images/yellow_mockup_final.png?token=AIGIS3RQHJSI7US7EN3AO7DBEZ5EA)
