@@ -15,6 +15,14 @@ class Utility {
       height: 160,
     );
   }
+  static Image imageFromBase64Stringnew(String base64String) {
+    return Image.memory(
+      base64Decode(base64String),
+      fit: BoxFit.cover,
+      width: 180,
+      height: 260,
+    );
+  }
 
   static showAlertDialog(BuildContext context, String message) {
     Widget okButton = TextButton(

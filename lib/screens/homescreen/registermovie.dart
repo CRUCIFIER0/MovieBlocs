@@ -50,10 +50,17 @@ class _AddMovieListState extends State<AddMovieList> {
     }
     return Scaffold(
       backgroundColor: Color.fromRGBO(28, 27, 37, 1),
+      appBar: AppBar(
+          leading: new IconButton(
+          icon: new Icon(EvaIcons.arrowIosBack, size: 30,color: Colors.white,),
+          onPressed: () => Navigator.of(context).pop(),
+        ),
+        backgroundColor: Color.fromRGBO(28, 27, 37, 1),
+      ),
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 35),
         child: Container(
-          margin: EdgeInsets.only(top: 50),
+          margin: EdgeInsets.only(top: 30),
           child: Form(
             key: _key,
             child: SingleChildScrollView(

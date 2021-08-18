@@ -37,6 +37,8 @@ dependencies:
   google_sign_in: ^5.0.7
   google_fonts: ^2.1.0
   eva_icons_flutter: ^3.0.0
+  flutter_rating_bar: ^4.0.0
+  like_button: ^2.0.2
 
 dev_dependencies:
   flutter_test:

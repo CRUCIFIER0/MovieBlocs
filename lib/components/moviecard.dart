@@ -2,6 +2,7 @@ import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:yellowclassapp/models/movie.dart';
+import 'package:yellowclassapp/screens/extrascreens/Displaymovie.dart';
 import 'package:yellowclassapp/screens/homescreen/registermovie.dart';
 import 'package:yellowclassapp/services/movieProvider.dart';
 import 'package:yellowclassapp/utils/utility.dart';
@@ -17,7 +18,17 @@ class MovieCard extends StatelessWidget {
     double randomNumber = random.nextDouble() + 7+random.nextDouble() +random.nextDouble();
     return InkWell(
       onTap: (){
-
+        Navigator.push(
+            context, MaterialPageRoute(
+            builder: (context)=>DisplayMovie(
+              name: movie!.name,
+              director: movie!.director,
+              img64: movie!.cover,
+              ogName: movie!.name,
+              rating: randomNumber.toStringAsFixed(1),
+            )
+        )
+        );
       },
       child: Container(
         margin: EdgeInsets.only(left: 24, right: 24),
