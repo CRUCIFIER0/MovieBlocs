@@ -29,12 +29,12 @@ class _CurprofileState extends State<Curprofile> {
                 //   child: ClipOval(child: Image.network("https://avatars.githubusercontent.com/u/34376046?v=4" )),
                 //   backgroundColor:Colors.transparent ,
                 // ),
-                SizedBox(height: 40,),
+                SizedBox(height: 80,),
                 Column(
                   children: [
                     Container(
-                      padding: EdgeInsets.only(left:24 ,top: 24,right: 24),
-                      height: 300,
+                      padding: EdgeInsets.only(left:24 ,top: 28,right: 24),
+
                       width: double.infinity,
                       //color: Color.fromRGBO(20, 20,26, 1),
                       decoration: BoxDecoration(
@@ -45,7 +45,9 @@ class _CurprofileState extends State<Curprofile> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(auth.firebaseAuth.currentUser!.displayName!,style: GoogleFonts.catamaran(textStyle: TextStyle(color: Colors.white, fontSize: 26, fontWeight: FontWeight.w600)),),
-                          SizedBox(height: 150,),
+                          SizedBox(height: 180,),
+                          Text("Don't forget to stream back in!",style: GoogleFonts.catamaran(textStyle: TextStyle(color: Colors.yellow, fontSize: 14, fontWeight: FontWeight.w400)),),
+                          SizedBox(height: 20,),
                           SizedBox(
                             width: double.infinity,
                             height: 45,
@@ -60,7 +62,8 @@ class _CurprofileState extends State<Curprofile> {
                                   style: TextStyle(color: Colors.black, fontSize: 16, fontWeight: FontWeight.w800),
                                 )
                             ),
-                          )
+                          ),
+                          SizedBox(height: 50,)
                         ],
                       ),
                     ),
