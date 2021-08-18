@@ -5,7 +5,6 @@ import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:like_button/like_button.dart';
 import 'package:yellowclassapp/models/movie.dart';
-import 'package:yellowclassapp/utils/readmore.dart';
 import 'package:yellowclassapp/utils/utility.dart';
 
 class DisplayMovie extends StatefulWidget {
@@ -65,9 +64,24 @@ class _DisplayMovieState extends State<DisplayMovie> {
           child: Column(
 
             children: [
-              ClipRRect(
-                borderRadius: BorderRadius.circular(20),
-                child: Utility.imageFromBase64Stringnew(widget.img64!),
+              Container(
+
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(20),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey.withOpacity(0.5),
+                      spreadRadius: 2,
+                      blurRadius: 7,
+                      offset: Offset(0, 3), // changes position of shadow
+                    ),
+                  ],
+                ),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(20),
+                  child: Utility.imageFromBase64Stringnew(widget.img64!),
+                ),
               ),
               SizedBox(height: 30,),
               Text(widget.name!,style: GoogleFonts.catamaran(textStyle: TextStyle(color: Colors.white, fontSize: 26, fontWeight: FontWeight.w500))),

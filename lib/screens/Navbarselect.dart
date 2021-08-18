@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/material.dart';
 import 'package:yellowclassapp/screens/extrascreens/MainPage.dart';
 import 'package:yellowclassapp/screens/extrascreens/Profile.dart';
+import 'package:yellowclassapp/screens/extrascreens/curprofile.dart';
 import 'package:yellowclassapp/screens/homescreen/home.dart';
 
 class NavBarSelect extends StatefulWidget {
@@ -19,7 +20,9 @@ class _NavBarSelectState extends State<NavBarSelect> {
       MainPage(),
       HomeScreen(),
       //Covidhelp(),
-      Profile()
+      Profile(),
+      Curprofile()
+
     ];
     return Scaffold(
       body: pages[_c],

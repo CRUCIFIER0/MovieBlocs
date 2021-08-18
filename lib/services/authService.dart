@@ -34,4 +34,16 @@ class AuthService {
     }
     else Icon(Icons.account_circle, size:100);
   }
+  getprofileImagebig(){
+    if(firebaseAuth.currentUser!.photoURL!= null){
+      return CircleAvatar(
+        radius: 80,
+        child: ClipOval(child: Image.network(firebaseAuth.currentUser!.photoURL! , )),
+        backgroundColor:Colors.transparent ,
+      );
+      //Image.network(firebaseAuth.currentUser!.photoURL! , height: 100, width: 100,);
+
+    }
+    else Icon(Icons.account_circle, size:100);
+  }
 }

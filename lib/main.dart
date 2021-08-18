@@ -4,6 +4,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:provider/provider.dart';
 import 'package:yellowclassapp/screens/Navbarselect.dart';
 import 'package:yellowclassapp/screens/homescreen/home.dart';
+import 'package:yellowclassapp/screens/login/SignUpscreen.dart';
 import 'package:yellowclassapp/screens/login/loginscreen.dart';
 import 'package:yellowclassapp/services/authService.dart';
 import 'package:yellowclassapp/theme/theme.dart';
@@ -37,7 +38,7 @@ class Wrapper extends StatelessWidget {
   Widget build(BuildContext context) {
     var user = Provider.of<User?>(context);
     if (user == null) {
-      return LoginScreen();
+      return SignUp();
     }
     return NavBarSelect();
   }

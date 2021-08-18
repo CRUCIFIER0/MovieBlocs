@@ -152,14 +152,14 @@ class _AddMovieListState extends State<AddMovieList> {
                       (widget.img64 == "")
                           ? Container(
                         margin: EdgeInsets.all(16),
-                        width: 120,
-                        height: 120,
+                        width: 200,
+                        height: 200,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
-                            color: Colors.yellow),
+                            color: Color.fromRGBO(30, 30, 49, 1).withOpacity(1)),
                         child: Center(
                             child: Text(
-                              'No Image Selected',
+                              '',
                               style: TextStyle(fontSize: 13),
                             )),
                       )
@@ -185,16 +185,6 @@ class _AddMovieListState extends State<AddMovieList> {
                           icon: Icon(EvaIcons.plusCircle,size: 40,color: Colors.grey.withOpacity(0.7),),
                           onPressed: () => pickImage(),
                         ),
-                        // child: InkWell(
-                        //   onTap: () => pickImage(),
-                        //   child: Text(
-                        //     'Upload/Change',
-                        //     style: TextStyle(
-                        //       color: Colors.deepOrange,
-                        //       fontWeight: FontWeight.bold,
-                        //     ),
-                        //   ),
-                        // ),
                       )
                     ],
                   ),

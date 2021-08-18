@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'package:provider/provider.dart';
 import 'package:yellowclassapp/components/moviecard.dart';
@@ -23,8 +24,13 @@ class _MovieListViewState extends State<MovieListView> {
   Widget build(BuildContext context) {
     var movies = Provider.of<List<Movie>>(context);
     // ignore: unnecessary_null_comparison
-    return (movies == null)
-        ? Center(child: CircularProgressIndicator())
+    return (movies.length==0)
+        ? Column(
+          children: [
+            Image(image: AssetImage('assets/music file2-05.png'),),
+            Text("You have no movies", style: GoogleFonts.catamaran(textStyle: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.w600)))
+          ],
+        )
         :  ListView.separated(
                   separatorBuilder: (context, index) {
                     return SizedBox(height: 10,);
