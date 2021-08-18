@@ -41,9 +41,17 @@ dependencies:
   like_button: ^2.0.2
   url_launcher: ^6.0.9
 
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
+  flutter_launcher_icons: ^0.9.1
+
+flutter_icons:
+  image_path: "assets/icon.png"
+  android: "launcher_icon"
+  ios: true
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
