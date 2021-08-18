@@ -36,7 +36,7 @@ This page contains current user's details(profile picture and name) and a sign o
 1) Clone this repository:
 
 ```
-git clone 
+git clone https://github.com/CRUCIFIER0/MovieBlocs
 ```
 
 2. Open the project in Vs Code or Android Studio
