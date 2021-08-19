@@ -1,5 +1,6 @@
 
-import 'package:yellowclassapp/db/dbhelper.dart';
+
+import 'package:yellowclassapp/databaseservices/dbhelper.dart';
 
 class Movie {
   String? name;

@@ -1,7 +1,7 @@
 import 'dart:async';
 
 
-import 'package:yellowclassapp/db/dbhelper.dart';
+import 'package:yellowclassapp/databaseservices/dbhelper.dart';
 import 'package:yellowclassapp/models/movie.dart';
 
 class MovieProvider {

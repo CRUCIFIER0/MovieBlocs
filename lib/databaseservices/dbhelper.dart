@@ -63,9 +63,6 @@ class DBhelper {
     );
   }
 
-  //Auto increment is bugging giving null to id, to counter that I will
-  //liberty to consider name as primary key aka names will be unique
-  //and all operations will be done with reference to name.
   Future update(Movie movie, String ogName) async {
     final database = await DBhelper.instance.db;
     await database.update(
