@@ -21,7 +21,7 @@ You are greeted with a wonderful selection of asorted movies for you to glance a
 
 ### Movie List 
 
-A list of all the movies which you add. You can modify and delete the listings of movies which you have made.
+A list of all the movies which you add. You can modify and delete the listings of movies which you have made. (Pagination / Infinite Scrolling implemented)
 
 ### Info Page
 
